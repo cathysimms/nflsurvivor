@@ -1,5 +1,5 @@
 # nflsurvivor
-nfl survivor pool application
+NFL Survivor Pool Application
 
 User logs into application and each week of the NFL season they pick a team that they think will win their matchup that week.
 the start with 3 lives
@@ -13,7 +13,7 @@ To create a CRUD application with utilisation of supporting tools,
 methodologies and technologies that encapsulate all core modules
 covered during training. 
 
-requirements:
+<b><u>Requirements:</b></u>
 * A Trello board (or equivalent Kanban board tech) - I plan on using Jira
 * A relational database with at least 2 tables
 * Clear Documentation
