@@ -40,5 +40,6 @@ You can cange your weekly picks up until the start of the first game for that we
 Optional - they can join leagues and look at the leaderboard for that league and also look at past and present picks for other users in that league ( but not their future picks ) 
 
 ## Database Schema
+WIP
 ![image](https://user-images.githubusercontent.com/116156199/198625284-4f77f89e-e763-4536-8f1e-16f95b885afb.png)
 
