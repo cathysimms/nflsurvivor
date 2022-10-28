@@ -1,11 +1,11 @@
 # NFL Survivor Pool Application
 The rules are simple. Pick one NFL team each week to win their game, and survive to play another week. 3 incorrect picks will eliminate you from the competition, so choose wisely.
 
-##Contents
+## Contents
 * [Project Brief](#Project-Brief)
 
 
-##Project Brief: 
+## Project Brief: 
 To create a CRUD application with utilisation of supporting tools,
 methodologies and technologies that encapsulate all core modules
 covered during training. 
