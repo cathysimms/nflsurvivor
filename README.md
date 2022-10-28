@@ -1,5 +1,5 @@
 # nflsurvivor
-NFL Survivor Pool Application
+<b>NFL Survivor Pool Application</b>
 
 User logs into application and each week of the NFL season they pick a team that they think will win their matchup that week.
 the start with 3 lives
@@ -8,12 +8,12 @@ they can only pick a team once per season
 
 Optional - they can join leagues and look at the leaderboard for that league and also look at past and present picks for other users in that league ( but not their future picks ) 
 
-<u>Brief:</u> 
+<b>Brief:</b> 
 To create a CRUD application with utilisation of supporting tools,
 methodologies and technologies that encapsulate all core modules
 covered during training. 
 
-<b><u>Requirements:</u></b>
+<b>Requirements:</b>
 * A Trello board (or equivalent Kanban board tech) - I plan on using Jira
 * A relational database with at least 2 tables
 * Clear Documentation
