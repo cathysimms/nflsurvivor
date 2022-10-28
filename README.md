@@ -2,7 +2,7 @@
 The rules are simple. Pick one NFL team each week to win their game, and survive to play another week. 3 incorrect picks will eliminate you from the competition, so choose wisely.
 
 ##Contents
-*[Project Brief](#Project-Brief)
+* [Project Brief](#Project-Brief)
 
 
 ##Project Brief: 
