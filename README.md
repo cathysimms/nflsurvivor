@@ -13,7 +13,7 @@ To create a CRUD application with utilisation of supporting tools,
 methodologies and technologies that encapsulate all core modules
 covered during training. 
 
-<b><u>Requirements:</b></u>
+<b><u>Requirements:</u></b>
 * A Trello board (or equivalent Kanban board tech) - I plan on using Jira
 * A relational database with at least 2 tables
 * Clear Documentation
