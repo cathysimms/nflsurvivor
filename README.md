@@ -8,7 +8,7 @@ they can only pick a team once per season
 
 Optional - they can join leagues and look at the leaderboard for that league and also look at past and present picks for other users in that league ( but not their future picks ) 
 
-Brief: 
+<u>Brief:</u> 
 To create a CRUD application with utilisation of supporting tools,
 methodologies and technologies that encapsulate all core modules
 covered during training. 
