@@ -3,6 +3,9 @@ The rules are simple. Pick one NFL team each week to win their game, and survive
 
 ## Contents
 * [Project Brief](#Project-Brief)
+* [Requirements](#Requirements)
+* [App Design](#App-Design)
+* [Database Schema](#Database-Schema)
 
 
 ## Project Brief: 
@@ -10,7 +13,7 @@ To create a CRUD application with utilisation of supporting tools,
 methodologies and technologies that encapsulate all core modules
 covered during training. 
 
-<b>Requirements:</b>
+## Requirements:
 * A Trello board (or equivalent Kanban board tech) - I plan on using Jira
 * A relational database with at least 2 tables
 * Clear Documentation
@@ -23,7 +26,7 @@ covered during training.
 * Built through a CI server 
 * Deployed to a cloud-based virtual machine.
 
-App Design
+## App Design
 
 I have chosen to create an application for an NFL Survivor Pool
 
@@ -36,6 +39,6 @@ You can cange your weekly picks up until the start of the first game for that we
 
 Optional - they can join leagues and look at the leaderboard for that league and also look at past and present picks for other users in that league ( but not their future picks ) 
 
-Database Schema
+## Database Schema
 ![image](https://user-images.githubusercontent.com/116156199/198625284-4f77f89e-e763-4536-8f1e-16f95b885afb.png)
 
