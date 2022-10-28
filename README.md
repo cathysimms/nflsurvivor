@@ -1,13 +1,6 @@
 # nflsurvivor
 <b>NFL Survivor Pool Application</b>
 
-User logs into application and each week of the NFL season they pick a team that they think will win their matchup that week.
-the start with 3 lives
-if they lose, they lose a life and when they run out of lives they cannot make any more picks
-they can only pick a team once per season
-
-Optional - they can join leagues and look at the leaderboard for that league and also look at past and present picks for other users in that league ( but not their future picks ) 
-
 <b>Brief:</b> 
 To create a CRUD application with utilisation of supporting tools,
 methodologies and technologies that encapsulate all core modules
@@ -25,3 +18,20 @@ covered during training.
 * Code fully integrated into a Version Control System using the Feature-Branch model
 * Built through a CI server 
 * Deployed to a cloud-based virtual machine.
+
+App Design
+
+I have chosen to create an application for an NFL Survivor Pool
+
+Users log into application and each week of the NFL season they pick a team that they think will win their matchup that week.
+They start with 3 lives.
+If they lose, they lose a life and when they run out of lives they cannot make any more picks
+They can only pick a team once per season
+
+You can cange your weekly picks up until the start of the first game for that week. 
+
+Optional - they can join leagues and look at the leaderboard for that league and also look at past and present picks for other users in that league ( but not their future picks ) 
+
+Database Schema
+![image](https://user-images.githubusercontent.com/116156199/198625284-4f77f89e-e763-4536-8f1e-16f95b885afb.png)
+
