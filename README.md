@@ -14,7 +14,7 @@ methodologies and technologies that encapsulate all core modules
 covered during training. 
 
 ## Requirements:
-* A Trello board (or equivalent Kanban board tech) - I plan on using Jira
+* A Trello board (or equivalent Kanban board tech) 
 * A relational database with at least 2 tables
 * Clear Documentation
 * A functional CRUD application created in Python
