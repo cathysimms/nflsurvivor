@@ -7,4 +7,5 @@ def home():
 
 @app.route("/<username>")
 def user(username):
-    return f"Hi {username}"
+    return render_template('user.html', name = username)
+    
