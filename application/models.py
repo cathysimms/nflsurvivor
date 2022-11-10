@@ -5,7 +5,7 @@ class Teams(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     team_name = db.Column(db.String(30), nullable=False)
     team_city = db.Column(db.String(30), nullable=False)
-    #picks = db.relationship('Picks', backref='teamspbr')
+    picks = db.relationship('Picks', backref='teamspbr')
    
 
 class Users(db.Model):
@@ -39,6 +39,6 @@ class Picks(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column('user_id',db.Integer, db.ForeignKey('users.id'), nullable=False)
     game_id = db.Column('games_id',db.Integer, db.ForeignKey('games.id'), nullable=False)
-    #team_id = db.Column('team_id',db.Integer, db.ForeignKey('teams.id'),  nullable=False)
+    team_id = db.Column('team_id',db.Integer, db.ForeignKey('teams.id'),  nullable=False)
 
 
