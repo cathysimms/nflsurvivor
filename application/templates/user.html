@@ -27,23 +27,7 @@
             {% for num in range(1,19) %}
             <th>Week {{num}}</th>
             {% endfor %}
-            <!-- <th>Week 2</th>
-            <th>Week 3</th>
-            <th>Week 4</th>
-            <th>Week 5</th>
-            <th>Week 6</th>
-            <th>Week 7</th>
-            <th>Week 8</th>
-            <th>Week 9</th>
-            <th>Week 10</th>
-            <th>Week 11</th>
-            <th>Week 12</th>
-            <th>Week 13</th>
-            <th>Week 14</th>
-            <th>Week 15</th>
-            <th>Week 16</th>
-            <th>Week 17</th>
-            <th>Week 18</th> -->
+    
           </tr>
           <tr>
             <td>no pick</td>
@@ -71,8 +55,16 @@
           <div class = 'form'>
             <form method='POST' action="">
                 {{form.week.label}} {{form.week}}
-                {{form.subweek.label}} {{form.subweek}}
+                {{form.subweek}}
             </form>
-        </div>        
+        </div>  
+        <br>
+        <table>
+            {% if week_no=='choose' %}
+            <tr>Choose a week</tr>
+            {% else %}
+            <tr>Week no {{week_no}}</tr>
+            {% endif %}
+        </table>      
 </body>
 </html>

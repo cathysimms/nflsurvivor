@@ -15,5 +15,8 @@ def home():
 @app.route("/<username>", methods =['GET','POST'])
 def user(username):
     form = UserForm()
-    return render_template('user.html', name = username, form=form)
+    week_no = "choose"
+    if request.method =='POST':
+        week_no = form.week.data
+    return render_template('user.html', name = username, form=form, week_no = week_no)
     
