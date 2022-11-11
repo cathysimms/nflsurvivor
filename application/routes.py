@@ -1,5 +1,5 @@
 from application import app
-from application.forms import HomeForm
+from application.forms import HomeForm, UserForm
 from flask import render_template, request, redirect, url_for
 
 @app.route("/", methods=['GET','POST'])
@@ -12,7 +12,11 @@ def home():
     else:
         return render_template('home.html', form = form)
 
-@app.route("/<username>")
+@app.route("/<username>", methods =['GET','POST'])
 def user(username):
-    return render_template('user.html', name = username)
+    form = UserForm()
+    week_no = "choose"
+    if request.method =='POST':
+        week_no = form.week.data
+    return render_template('user.html', name = username, form=form, week_no = week_no)
     

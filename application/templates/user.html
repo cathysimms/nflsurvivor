@@ -1,8 +1,70 @@
 <html>
-<head>
-    <title> User Picks Page</title>
-</head>
+    <head>
+        <style>
+            table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            }
+            
+            td, th {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+            background-color: #dddddd;
+            }
+        </style>
+        <title> User Picks Page</title>
+    </head>
 <body>
     <h1> {{name|capitalize}}'s Picks</h1>
+
+        <table>
+          <tr>
+            {% for num in range(1,19) %}
+            <th>Week {{num}}</th>
+            {% endfor %}
+    
+          </tr>
+          <tr>
+            <td>no pick</td>
+            <td>no pick</td>
+            <td>no pick</td>
+            <td>no pick</td>
+            <td>no pick</td>
+            <td>no pick</td>
+            <td>no pick</td>
+            <td>no pick</td>
+            <td>no pick</td>
+            <td>no pick</td>
+            <td>no pick</td>
+            <td>no pick</td>
+            <td>no pick</td>
+            <td>no pick</td>
+            <td>no pick</td>
+            <td>no pick</td>
+            <td>no pick</td>
+            <td>no pick</td>
+            
+          </tr>
+          </table>
+          <br>
+          <div class = 'form'>
+            <form method='POST' action="">
+                {{form.week.label}} {{form.week}}
+                {{form.subweek}}
+            </form>
+        </div>  
+        <br>
+        <table>
+            {% if week_no=='choose' %}
+            <tr>Choose a week</tr>
+            {% else %}
+            <tr>Week no {{week_no}}</tr>
+            {% endif %}
+        </table>      
 </body>
 </html>
