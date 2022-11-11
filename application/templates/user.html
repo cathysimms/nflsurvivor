@@ -62,7 +62,7 @@
             </form>
         </div>  
         <br>
-        <table style='width:80%'>
+        <table style='width:60%'>
             {% if week_no=='choose' %}
                 <tr>Choose a week</tr>
             {% else %}
@@ -79,11 +79,11 @@
                 <div class = 'form'>
                     <form method='POST' action="">
                         <tr>
-                            <td style="text-align: right">{{form.subhome}}</td>
+                            <td style="text-align: center" width="10%">{{form.subhome}}</td>
                             <td>{{home_teams[i]}}</td>
                             <td> VS </td>
                             <td>{{away_teams[i]}}</td>
-                            <td style="text-align: left">{{form.subaway}}</td>
+                            <td style="text-align: center" width="10%">{{form.subaway}}</td>
                         </tr>
                     </form>
                 </div>
@@ -92,6 +92,6 @@
         </table>      
     </body>
     <footer>
-        
+
     </footer>
 </html>
