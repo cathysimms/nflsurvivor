@@ -1,11 +1,22 @@
 from application import app
-from flask import render_template
+from application.forms import HomeForm, UserForm
+from flask import render_template, request, redirect, url_for
 
-@app.route("/")
+@app.route("/", methods=['GET','POST'])
 def home():
-    return render_template('home.html')
+    form = HomeForm()
 
-@app.route("/<username>")
+    if request.method =='POST':
+        username = form.username.data
+        return redirect(url_for('user', username = username))
+    else:
+        return render_template('home.html', form = form)
+
+@app.route("/<username>", methods =['GET','POST'])
 def user(username):
-    return render_template('user.html', name = username)
+    form = UserForm()
+    week_no = "choose"
+    if request.method =='POST':
+        week_no = form.week.data
+    return render_template('user.html', name = username, form=form, week_no = week_no)
     

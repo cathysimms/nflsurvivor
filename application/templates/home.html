@@ -3,6 +3,17 @@
     <title> Home Page</title>
 </head>
 <body>
-    <h1> Home Page</h1>
+    <h1> Welcome to Cathy's NFL Survivor Pool</h1>
+    <div class = 'form'>
+        <form method='POST' action="">
+            {{form.hidden_tag()}}
+            {{form.username.label}} {{form.username}}
+            <br>
+            {{form.submit.label}} {{form.submit}}
+        </form>
+
+    </div>
+    <h2>NFL Schedule 2022</h2>
+
 </body>
 </html>
