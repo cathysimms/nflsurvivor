@@ -63,7 +63,18 @@
             {% if week_no=='choose' %}
             <tr>Choose a week</tr>
             {% else %}
-            <tr>Week no {{week_no}}</tr>
+            <tr><th>Week {{week_no}}</th></tr>
+            <tr>
+                <th>Home Team</th>
+                <th>Away Team</th>
+            </tr>
+            
+            {% for i in range(16) %} 
+            <tr>
+            <td>{{home_teams[i]}}</td>
+            <td>{{away_teams[i]}}</td>
+            </tr>
+            {% endfor %}
             {% endif %}
         </table>      
 </body>
