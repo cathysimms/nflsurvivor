@@ -41,6 +41,6 @@ Optional - they can join leagues and look at the leaderboard for that league and
 
 ## Database Schema
 WIP
-![EER_Diagram](https://user-images.githubusercontent.com/116156199/201050765-d7443904-463e-4206-b69b-6a8fd3ee7a72.jpg)
+
 
 
