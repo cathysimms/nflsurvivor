@@ -5,12 +5,15 @@
             font-family: arial, sans-serif;
             border-collapse: collapse;
             width: 100%;
+            margin-left:auto;
+            margin-right:auto;
             }
             
             td, th {
             border: 1px solid #dddddd;
             text-align: center;
             padding: 8px;
+
             }
             
             tr:nth-child(even) {
@@ -19,13 +22,13 @@
         </style>
         <title> User Picks Page</title>
     </head>
-<body>
-    <h1> {{name|capitalize}}'s Picks</h1>
-
+    <body>
+        <h1 style="text-align:center"> {{name|capitalize}}'s Picks</h1>
+    
         <table>
           <tr>
             {% for num in range(1,19) %}
-            <th>Week {{num}}</th>
+            <th>Week {{num}} </th>
             {% endfor %}
     
           </tr>
@@ -50,32 +53,45 @@
             <td>no pick</td>
             
           </tr>
-          </table>
-          <br>
-          <div class = 'form'>
+        </table>
+        <br>
+        <div class = 'form'>
             <form method='POST' action="">
                 {{form.week.label}} {{form.week}}
                 {{form.subweek}}
             </form>
         </div>  
         <br>
-        <table>
+        <table style='width:80%'>
             {% if week_no=='choose' %}
-            <tr>Choose a week</tr>
+                <tr>Choose a week</tr>
             {% else %}
-            <tr><th>Week {{week_no}}</th></tr>
-            <tr>
-                <th>Home Team</th>
-                <th>Away Team</th>
-            </tr>
+                <tr ><th colspan="5">Week {{week_no}} pick: {{pick}} {{form.subpick}}</th></tr>
+                <tr>
+                    <th></th>
+                    <th>Home Team</th>
+                    <th></th>
+                    <th>Away Team</th>
+                    <th></th>
+                </tr>
             
-            {% for i in range(16) %} 
-            <tr>
-            <td>{{home_teams[i]}}</td>
-            <td>{{away_teams[i]}}</td>
-            </tr>
-            {% endfor %}
+                {% for i in range(num) %} 
+                <div class = 'form'>
+                    <form method='POST' action="">
+                        <tr>
+                            <td style="text-align: right">{{form.subhome}}</td>
+                            <td>{{home_teams[i]}}</td>
+                            <td> VS </td>
+                            <td>{{away_teams[i]}}</td>
+                            <td style="text-align: left">{{form.subaway}}</td>
+                        </tr>
+                    </form>
+                </div>
+                {% endfor %}
             {% endif %}
         </table>      
-</body>
+    </body>
+    <footer>
+        
+    </footer>
 </html>
