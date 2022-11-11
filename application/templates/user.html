@@ -55,18 +55,22 @@
           </tr>
         </table>
         <br>
-        <div class = 'form'>
-            <form method='POST' action="">
-                {{form.week.label}} {{form.week}}
-                {{form.subweek}}
-            </form>
-        </div>  
+        
         <br>
         <table style='width:60%'>
             {% if week_no=='choose' %}
                 <tr>Choose a week</tr>
             {% else %}
-                <tr ><th colspan="5">Week {{week_no}} pick: {{pick}} {{form.subpick}}</th></tr>
+            <div class = 'form'>
+                <form method='POST' action="">
+                    <tr > 
+                        <th colspan="2" width="45%"> {{form.week.label}} {{form.week}} {{form.subweek}}</th>
+                        <th></th>
+                        <th colspan="2" width="45%"> pick {{week_no}}: {{pick}} {{form.subpick}}</th>
+                    </tr>
+                   
+                </form>
+            </div>  
                 <tr>
                     <th></th>
                     <th>Home Team</th>
