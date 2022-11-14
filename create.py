@@ -4,7 +4,18 @@ from application.models import Teams, Games, Users, Picks
 db.drop_all()
 db.create_all()
 
+#Users
+# testUser = Users(username = 'cathy')
+# db.session.add(testUser)
+# db.session.commit()
 
+#test pick
+
+# pick1 = Picks(user_id = 1, team_id = 1, week_no = 1)
+# db.session.add(pick1)
+# db.session.commit()
+
+#teams
 cardinals = Teams(team_name = 'Cardinals', team_city='Arizona')
 falcons = Teams(team_name = 'Falcons', team_city='Atlanta')
 ravens = Teams(team_name = 'Ravens', team_city='Baltimore')
@@ -37,10 +48,11 @@ seahawks = Teams(team_name = 'Seahawks', team_city='Seattle')
 buccaneers = Teams(team_name = 'Buccaneers', team_city='Tampa Bay')
 titans = Teams(team_name = 'Titans', team_city='Tennessee')
 commanders = Teams(team_name = 'Commanders', team_city='Washington')
+nopick = Teams(team_name = 'No Pick', team_city = 'No Pick')
 
 
 
-teams = [cardinals,falcons,ravens,bills,bengals,browns,panthers,bears,cowboys,broncos,lions,packers,texans,colts,jaguars,chiefs,raiders,chargers,rams,dolphins,vikings,patriots,saints,giants,jets,eagles,steelers,niners,seahawks,buccaneers,titans,commanders]
+teams = [cardinals,falcons,ravens,bills,bengals,browns,panthers,bears,cowboys,broncos,lions,packers,texans,colts,jaguars,chiefs,raiders,chargers,rams,dolphins,vikings,patriots,saints,giants,jets,eagles,steelers,niners,seahawks,buccaneers,titans,commanders, nopick]
 for team in teams:
     db.session.add(team)
 db.session.commit()
