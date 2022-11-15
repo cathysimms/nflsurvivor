@@ -1,4 +1,4 @@
-from flask import url_for
+from flask import url_for, request
 from flask_testing import TestCase
 from application import app, db
 from application.models import Users, Teams, Games, Picks
@@ -46,3 +46,25 @@ class TestHome(TestBase):
         response = self.client.get(url_for('home'))
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Home', response.data)
+
+class TestUser(TestBase):
+    def test_user_get(self):
+        response = self.client.get(url_for('user', username = 'TestName', id = 1 ))
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'TestName', response.data)
+
+class TestUpdate(TestBase):
+    def test_update_get(self):
+        response = self.client.get(url_for('update', week_no = 1, user_id = 1, team = 'TestTeam' ), follow_redirects = True)
+        self.assertEqual(response.status_code, 200)
+
+class TestDelete(TestBase):
+    def test_delete_get(self):
+        response = self.client.get(url_for('delete', id = 1 ))
+        assert request.path == url_for('home')
+
+class TestAddUser(TestBase):
+    def test_add_user(self):
+        response = self.client.post(url_for('home'), data = dict(username = 'TestName'), follow_redirects=True )
+        self.assertIn(b'TestName', response.data)
+
