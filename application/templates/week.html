@@ -34,7 +34,7 @@
                     {% if away_teams[i] in user_picks %}
                     <td> Already Chosen</td>
                     {% else %}
-                    <td style="text-align: center" width="10%" ><button><a  href="{{url_for('update', week_no = week_no, user_id = user.id, team = away_teams[i])}}">Select {{user_picks[i]}}</a></button></td>
+                    <td style="text-align: center" width="10%" ><button><a  href="{{url_for('update', week_no = week_no, user_id = user.id, team = away_teams[i])}}">Select</a></button></td>
                     {% endif %}
                 </tr>
             </form>
