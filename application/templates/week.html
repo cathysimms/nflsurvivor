@@ -1,0 +1,45 @@
+{% extends 'user.html' %}
+{% block body %}
+
+<table style='width:60%'>
+            
+    <div class = 'form'>
+        <form method='POST' action="">
+            <tr > 
+                    <th colspan="5" width="45%"> Week {{week_no}} {{message}}</th>
+            </tr>
+           
+        </form>
+    </div>  
+        <tr>
+            <th></th>
+            <th>Home Team</th>
+            <th></th>
+            <th>Away Team</th>
+            <th></th>
+        </tr>
+    
+        {% for i in range(num) %} 
+        <div class = 'form'>
+            <form method='POST' action="">
+                <tr>
+                    {% if home_teams[i] in user_picks %}
+                        <td> Already Chosen</td>
+                    {% else %}
+                        <td style="text-align: center" width="10%"><button><a href="{{url_for('update', week_no = week_no, user_id = user.id, team = home_teams[i])}}">Select</a></button></td>
+                    {% endif %}
+                    <td>{{home_teams[i]}}</td>
+                    <td> VS </td>
+                    <td>{{away_teams[i]}}</td>
+                    {% if away_teams[i] in user_picks %}
+                    <td> Already Chosen</td>
+                    {% else %}
+                    <td style="text-align: center" width="10%" ><button><a  href="{{url_for('update', week_no = week_no, user_id = user.id, team = away_teams[i])}}">Select</a></button></td>
+                    {% endif %}
+                </tr>
+            </form>
+        </div>
+        {% endfor %}
+</table> 
+
+{% endblock body %}
