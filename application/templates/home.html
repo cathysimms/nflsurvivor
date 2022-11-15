@@ -37,9 +37,9 @@
     <h2>League Table</h2>
     <table>
         <tr>
-            <th> User </th>
+            <th width = '7%'> User </th>
             {% for i  in range(1,19) %}
-                <th> Week {{i}}</th>
+                <th width = '5%'> Week<br> {{i}}</th>
             {% endfor %}  
         </tr>
         {% for user in all_users %}
@@ -50,7 +50,7 @@
                 <td>{{team.team_name}}</td>
                 {% endif %}
             {% endfor %}
-            <td><button><a href ="{{url_for('delete', id = user.id)}}"> Delete User</a> </button></td>
+            <td width = '3%'><button><a href ="{{url_for('delete', id = user.id)}}"> Delete User</a> </button></td>
         </tr>
         {% endfor %}
     </table>
