@@ -23,11 +23,19 @@
         <div class = 'form'>
             <form method='POST' action="">
                 <tr>
-                    <td style="text-align: center" width="10%"><button><a href="{{url_for('update', week_no = week_no, user_id = user_id, team = home_teams[i])}}">Select</a></button></td>
+                    {% if home_teams[i] in user_picks %}
+                        <td> Already Chosen</td>
+                    {% else %}
+                        <td style="text-align: center" width="10%"><button><a href="{{url_for('update', week_no = week_no, user_id = user.id, team = home_teams[i])}}">Select</a></button></td>
+                    {% endif %}
                     <td>{{home_teams[i]}}</td>
                     <td> VS </td>
                     <td>{{away_teams[i]}}</td>
-                    <td style="text-align: center" width="10%" ><button><a  href="{{url_for('update', week_no = week_no, user_id = user_id, team = away_teams[i])}}">Select</a></button></td>
+                    {% if away_teams[i] in user_picks %}
+                    <td> Already Chosen</td>
+                    {% else %}
+                    <td style="text-align: center" width="10%" ><button><a  href="{{url_for('update', week_no = week_no, user_id = user.id, team = away_teams[i])}}">Select {{user_picks[i]}}</a></button></td>
+                    {% endif %}
                 </tr>
             </form>
         </div>

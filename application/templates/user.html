@@ -23,13 +23,13 @@
         <title> User Picks Page</title>
     </head>
     <body>
-        <h1 style="text-align:center"> {{name|capitalize}}'s Picks</h1>
+        <h1 style="text-align:center"> {{user.username|capitalize}}'s Picks</h1>
         <h2> <button><a href ="{{url_for('home')}}"> HOME </a></button></h2>
     
         <table>
             <tr>
             {% for num in range(1,19) %}
-                <th><a href="{{url_for('week', username = name, week_no = num)}}">Week {{num}} </a></th>
+                <th><a href="{{url_for('week', username = user.username, week_no = num)}}">Week {{num}} </a></th>
             {% endfor %}
     
             </tr>
