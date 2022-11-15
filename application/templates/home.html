@@ -50,10 +50,12 @@
                 <td>{{team.team_name}}</td>
                 {% endif %}
             {% endfor %}
+            <td><button><a href ="{{url_for('delete', id = user.id)}}"> Delete User</a> </button></td>
         </tr>
         {% endfor %}
     </table>
     {% endif %}
+
 
 
 </body>

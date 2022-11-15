@@ -86,3 +86,16 @@ def update(week_no, user_id, team):
 
     return redirect(url_for('week', username = username, week_no = week_no))
 
+@app.route('/delete/<int:id>', methods=['GET','POST'])
+def delete(id):
+
+    user = Users.query.filter_by(id = id).first()
+    picks = Picks.query.filter_by(user_id = id).all()
+
+    db.session.delete(user)
+    for pick in picks:
+        db.session.delete(pick)
+    
+    db.session.commit()
+
+    return redirect(url_for('home'))
