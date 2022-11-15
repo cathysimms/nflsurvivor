@@ -10,24 +10,24 @@ def home():
     all_picks = db.session.query(Picks, Teams).join(Teams).all()
 
     if request.method =='POST':
-        
-        username = form.username.data
-        users = Users.query.filter_by(username = username).all()
-        
-        for user in users:
-            if username == user.username:
-                return redirect(url_for('user', username = user.username, id = user.id))  
-        
-        new_user = Users(username = username)
-        db.session.add(new_user)
-        db.session.commit()
-        
-        for i in range(1,19):
-            new_pick = Picks(user_id = new_user.id, week_no = i, team_id = 33)
-            db.session.add(new_pick)
-        db.session.commit()
-        
-        return redirect(url_for('user', username = new_user.username, id = new_user.id))
+        if form.validate_on_submit():
+            username = form.username.data
+            users = Users.query.filter_by(username = username).all()
+            
+            for user in users:
+                if username == user.username:
+                    return redirect(url_for('user', username = user.username, id = user.id))  
+            
+            new_user = Users(username = username)
+            db.session.add(new_user)
+            db.session.commit()
+            
+            for i in range(1,19):
+                new_pick = Picks(user_id = new_user.id, week_no = i, team_id = 33)
+                db.session.add(new_pick)
+            db.session.commit()
+            
+            return redirect(url_for('user', username = new_user.username, id = new_user.id))
 
     else:
         return render_template('home.html', form = form, all_users = all_users, all_picks = all_picks)

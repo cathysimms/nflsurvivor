@@ -1,13 +1,8 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, SelectField, BooleanField
+from wtforms import StringField, SubmitField
+from wtforms.validators import DataRequired
 
 class HomeForm(FlaskForm):
-    username = StringField('Username')
+    username = StringField('Username', validators=[DataRequired()])
     submit = SubmitField('Enter Username')
     
-
-# class UserForm(FlaskForm):
-#     #week = SelectField('Week', choices=[('1','1'),('2','2'),('3','3'),('4','4'),('5','5'),('6','6'),('7','7'),('8','8'),('9','9'),('10','10'),('11','11'),('12','12'),('13','13'),('14','14'),('15','15'),('16','16'),('17','17'),('18','18')])
-#     #home_bool = BooleanField()
-#     #away_bool = BooleanField('Select',default = False)
-#     #subpick = SubmitField('Confirm Pick')
