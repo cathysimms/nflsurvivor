@@ -6,6 +6,10 @@ The rules are simple. Pick one NFL team each week to win their game, and survive
 * [Requirements](#Requirements)
 * [App Design](#App-Design)
 * [Database Schema](#Database-Schema)
+* [Pipeline](#Pipeline)
+* [Testing](#Testing)
+* [The App](#The-App)
+* [Future Work](#Future-Work)
 
 
 ## Project Brief: 
