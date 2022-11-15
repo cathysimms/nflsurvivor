@@ -30,30 +30,31 @@ def home():
 @app.route("/<username>/<int:id>", methods =['GET','POST'])
 def user(username, id):
     form = UserForm() 
-    # user = Users.query.filter_by(username = username).first()
-    
-    display_picks = ['no pick']
-    for i in range(1,19):
-        pick = Picks.query.filter_by(user_id = id, week_no = i).first()
-        team = Teams.query.filter_by(id = pick.team_id).first()
-        display_picks.append(team.team_name)
+    all_picks = db.session.query(Picks, Teams).join(Teams).all()
+    user = Users.query.filter_by(id = id).first()
+    # display_picks = ['no pick']
+    # for i in range(1,19):
+    #     pick = Picks.query.filter_by(user_id = id, week_no = i).first()
+    #     team = Teams.query.filter_by(id = pick.team_id).first()
+    #     display_picks.append(team.team_name)
 
-    return render_template('user.html', name = username, form=form, picks = display_picks) 
+    return render_template('user.html', name = username, form=form, all_picks = all_picks, user = user) 
     
 @ app.route("/<username>-week<int:week_no>", methods=['GET', 'POST'])
 def week(username, week_no):
     form = UserForm()
     home_teams = []
     user = Users.query.filter_by(username = username).first()
+    all_picks = db.session.query(Picks, Teams).join(Teams).all()
     away_teams = []
     game_id = []
     num = 0
     
-    display_picks = ['no pick']
-    for i in range(1,19):
-        pick = Picks.query.filter_by(user_id = user.id, week_no = i).first()
-        team = Teams.query.filter_by(id = pick.team_id).first()
-        display_picks.append(team.team_name)
+    # display_picks = ['no pick']
+    # for i in range(1,19):
+    #     pick = Picks.query.filter_by(user_id = user.id, week_no = i).first()
+    #     team = Teams.query.filter_by(id = pick.team_id).first()
+    #     display_picks.append(team.team_name)
 
     all_games = Games.query.filter_by(week_no = week_no).all()
     for game in all_games:
@@ -64,7 +65,7 @@ def week(username, week_no):
         game_id.append(game)
 
         num += 1 
-    return render_template('week.html', form = form, name = username, num = num ,home_teams = home_teams, away_teams = away_teams, week_no = week_no, game_id = game_id, user_id = user.id, picks = display_picks)
+    return render_template('week.html', form = form, name = username, num = num ,home_teams = home_teams, away_teams = away_teams, week_no = week_no, game_id = game_id, user_id = user.id, user = user, all_picks = all_picks)
 
 @app.route('/update/<int:week_no>/<int:user_id>/<team>', methods=['GET','POST'])
 def update(week_no, user_id, team):

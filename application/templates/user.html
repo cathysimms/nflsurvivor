@@ -27,19 +27,20 @@
         <h2> <button><a href ="{{url_for('home')}}"> HOME </a></button></h2>
     
         <table>
-          <tr>
+            <tr>
             {% for num in range(1,19) %}
                 <th><a href="{{url_for('week', username = name, week_no = num)}}">Week {{num}} </a></th>
             {% endfor %}
     
-          </tr>
-          <tr>
-            {% for num in range(1,19) %}
-                <td>{{picks[num]}}</td>
+            </tr>
+            <tr>
+            {% for pick, team in all_picks %}
+            {% if pick.user_id == user.id %}
+                <td>{{team.team_name}}</td>
+            {% endif %}
             {% endfor %}
+            </tr>
             
-            
-          </tr>
         </table>
         {% block body %}
         
