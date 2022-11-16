@@ -65,6 +65,6 @@ class TestDelete(TestBase):
 
 class TestAddUser(TestBase):
     def test_add_user(self):
-        response = self.client.post(url_for('home'), data = dict(username = 'TestName'), follow_redirects=True )
+        response = self.client.post(url_for('home'), data = dict(username = 'TestName2'), follow_redirects=True )
         self.assertIn(b'TestName', response.data)
 
