@@ -6,6 +6,7 @@ The rules are simple. Pick one NFL team each week to win their game, and survive
 * [Requirements](#Requirements)
 * [App Design](#App-Design)
 * [Database Schema](#Database-Schema)
+* [Risk Assessment](#Risk-Assessment)
 * [Pipeline](#Pipeline)
 * [Testing](#Testing)
 * [The App](#The-App)
@@ -54,7 +55,7 @@ They can join leagues and look at the leaderboard for that league and also look 
 
 ## Risk Assessment
 
-Please see below the inital [risk assessment](#https://alexmann-my.sharepoint.com/:x:/r/personal/cathy_simms_weareams_com/_layouts/15/Doc.aspx?sourcedoc=%7B95C05E09-FCFD-444A-85B4-EF5E13802B1B%7D&file=workout_Risk_WITH_FINAL_REVIEWS.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&login_hint=Cathy.Simms%40weareams.com&ct=1668596212273&wdOrigin=OFFICECOM-WEB.START.EDGEWORTH&cid=b68850c7-a12d-4ebe-8811-36f3e58ce07d):
+Please see below the inital [risk assessment](https://alexmann-my.sharepoint.com/:x:/r/personal/cathy_simms_weareams_com/_layouts/15/Doc.aspx?sourcedoc=%7B95C05E09-FCFD-444A-85B4-EF5E13802B1B%7D&file=workout_Risk_WITH_FINAL_REVIEWS.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&login_hint=Cathy.Simms%40weareams.com&ct=1668596212273&wdOrigin=OFFICECOM-WEB.START.EDGEWORTH&cid=b68850c7-a12d-4ebe-8811-36f3e58ce07d):
 
 ![image](https://user-images.githubusercontent.com/116156199/202208403-021a672c-ec85-4c0e-8a4c-93d8e24cfbf9.png)
 
