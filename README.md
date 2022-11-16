@@ -63,10 +63,9 @@ I used a repository on git hub for version control
 
 ## Testing
 
-I used unit testing tests to test my code. I am currently up to 7 psses and coverage of 98%
+I used unit testing tests to test my code. I am currently up to 8 passes and coverage of 100%
 
-![image](https://user-images.githubusercontent.com/116156199/202136241-03e1e079-6c5c-4802-b90c-b89c7fdc3248.png)
-
+![image](https://user-images.githubusercontent.com/116156199/202142808-f1c59000-56f3-4f9e-bb62-01ccac0b47db.png)
 
 ## The App
 
