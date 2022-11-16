@@ -58,6 +58,11 @@ class TestUpdate(TestBase):
         response = self.client.get(url_for('update', week_no = 1, user_id = 1, team = 'TestTeam' ), follow_redirects = True)
         self.assertEqual(response.status_code, 200)
 
+class TestUpdate2(TestBase):
+    def test_update2_get(self):
+        response = self.client.get(url_for('update', week_no = 1, user_id = 1, team = 'TestTeam2' ), follow_redirects = True)
+        self.assertEqual(response.status_code, 200)
+
 class TestDelete(TestBase):
     def test_delete_get(self):
         response = self.client.get(url_for('delete', id = 1 ))
