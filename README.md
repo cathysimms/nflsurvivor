@@ -49,7 +49,7 @@ They can join leagues and look at the leaderboard for that league and also look 
 
 ![image](https://user-images.githubusercontent.com/116156199/201987265-57b8e63b-b673-446b-8754-a580c9a15822.png)
 
-### current complete layout 
+### Current layout 
 
 ![image](https://user-images.githubusercontent.com/116156199/202020798-8e19ea0c-2680-478e-85dc-aec8ce8e5987.png)
 
