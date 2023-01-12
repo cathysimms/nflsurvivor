@@ -6,6 +6,7 @@ The rules are simple. Pick one NFL team each week to win their game, and survive
 * [Requirements](#Requirements)
 * [App Design](#App-Design)
 * [Database Schema](#Database-Schema)
+* [Risk Assessment](#Risk-Assessment)
 * [Pipeline](#Pipeline)
 * [Testing](#Testing)
 * [The App](#The-App)
@@ -48,9 +49,16 @@ They can join leagues and look at the leaderboard for that league and also look 
 
 ![image](https://user-images.githubusercontent.com/116156199/201987265-57b8e63b-b673-446b-8754-a580c9a15822.png)
 
-### current complete layout 
+### Current layout 
 
 ![image](https://user-images.githubusercontent.com/116156199/202020798-8e19ea0c-2680-478e-85dc-aec8ce8e5987.png)
+
+## Risk Assessment
+
+Please see below the inital [risk assessment](https://alexmann-my.sharepoint.com/:x:/r/personal/cathy_simms_weareams_com/_layouts/15/Doc.aspx?sourcedoc=%7B95C05E09-FCFD-444A-85B4-EF5E13802B1B%7D&file=workout_Risk_WITH_FINAL_REVIEWS.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&login_hint=Cathy.Simms%40weareams.com&ct=1668596212273&wdOrigin=OFFICECOM-WEB.START.EDGEWORTH&cid=b68850c7-a12d-4ebe-8811-36f3e58ce07d):
+
+![image](https://user-images.githubusercontent.com/116156199/202208403-021a672c-ec85-4c0e-8a4c-93d8e24cfbf9.png)
+
 
 ## Pipeline
 
@@ -63,10 +71,9 @@ I used a repository on git hub for version control
 
 ## Testing
 
-I used unit testing tests to test my code. I am currently up to 7 psses and coverage of 98%
+I used unit testing tests to test my code. I am currently up to 8 passes and coverage of 100%
 
-![image](https://user-images.githubusercontent.com/116156199/202136241-03e1e079-6c5c-4802-b90c-b89c7fdc3248.png)
-
+![image](https://user-images.githubusercontent.com/116156199/202142808-f1c59000-56f3-4f9e-bb62-01ccac0b47db.png)
 
 ## The App
 
