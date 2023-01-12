@@ -1,0 +1,22 @@
+version: 0.2
+  
+phases:
+  install:
+    commands:
+      - "echo installing"
+      - "apt update"
+      - "apt install python3 python3-pip -y"
+
+  pre_build:
+    commands:
+      - "echo setup"
+      - "pip3 install -r requirements.txt"
+
+  build:
+    commands:
+      - "echo Testing"
+      - "python -m pytest"
+
+  post_build:
+    commands:
+      - "echo Done!"
